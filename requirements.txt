@@ -1,0 +1,6 @@
+langchain
+langchain-chroma
+langchain-community
+langchain-google-vertexai
+python-dotenv
+streamlit
