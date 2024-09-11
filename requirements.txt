@@ -2,5 +2,8 @@ langchain
 langchain-chroma
 langchain-community
 langchain-google-vertexai
+langchain-google-genai
 python-dotenv
 streamlit
+google-generativeai
+dotmap
