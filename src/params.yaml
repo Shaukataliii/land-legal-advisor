@@ -1,8 +1,21 @@
 revenue_laws_seps : ['.  \n  \nC', '.  \n  \n', '. \n  \n', '. \n \n ', ' \n  \n', '.   \n', '.  \n ', '.\n', '] \n  \n', ']  \n  \n', '.  \n \n \n \n[', '.  \n      (', '. \n(', '. \n (', '.  \n(', '.  \n (', '. \n \n(', '.  \n[']
 chunk_size : 1000
 chunk_overlap : 200
-database_name : "database"
-system_role : "You are a legal expert and a professional communicator. You will receive a user query, legal rules as context and the user chat history. User these details to answer the query. If you don't know the answer or is not present in the provided details, simply say that The documents doesn't contain the answer. context = {context}"
+database_name : "VDB-revenue_law_books"
+database_path: "src/VDB-revenue_law_books"
+system_role: |
+  You are a legal expert and a professional communicator. Your task is to answer user queries using provided legal rules, which are given as context in the form of documents from LangChain. Follow these rules strictly:
+
+  1. **Handling Unknowns**: If the answer is not present in the provided context:
+     - Explicitly state: "The rules do not define this."
+     - Provide a brief summary of the relevant context provided, if available.
+
+  2. **Answer creating**: As the context is gonna create legal rules, so try to use the rules as is, but make sure the sentence is smooth and understandable.
+
+  Context: {context}
+
+
+
 
 # REVENUE_LAWS_SEPS_DICT = {
 #     "chapter_sep" : ".  \n  \nC",
